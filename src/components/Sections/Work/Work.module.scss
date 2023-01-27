@@ -8,6 +8,18 @@
   @include md {
     height: 400px;
   }
+
+  &[data-is-number-odd="true"] {
+    margin-right: auto;
+  }
+
+  &[data-is-number-odd="false"] {
+    margin-left: auto;
+
+    @include sm {
+      margin-left: unset;
+    }
+  }
 }
 
 .work__text {
@@ -22,5 +34,34 @@
     position: absolute;
     background: var(--ps--color-action);
     left: 20px;
+  }
+
+  &[data-is-number-odd="true"] {
+    padding-left: 0;
+    padding-right: 50px;
+
+    @include sm {
+      padding-left: 50px;
+      padding-right: 0;
+    }
+
+    &:before {
+      left: unset;
+      right: 20px;
+
+      @include sm {
+        left: 20px;
+        right: unset;
+      }
+    }
+
+    h3, span {
+      text-align: right !important;
+      width: 100%;
+
+      @include sm {
+        text-align: left !important;
+      }
+    }
   }
 }

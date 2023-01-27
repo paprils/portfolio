@@ -30,10 +30,8 @@ const Hero = () => {
             <br />
             <Text style={"h2"} color={"accent"}>
               <div className={css.hero__description}>
-                For most of my career I’ve been working as a creative
-                <br />
-                graphic designer and for the past year I’ve been
-                <br />
+                For most of my career I’ve been working as a creative <br />
+                graphic designer and for the past year I’ve been <br />
                 working as a Junior React Developer.
               </div>
             </Text>

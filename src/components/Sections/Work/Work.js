@@ -27,7 +27,10 @@ const Work = () => {
               orderXl={isNumberEven(index) ? 1 : 2}
               orderLg={isNumberEven(index) ? 1 : 2}
             >
-              <div className={css.work__image}>
+              <div
+                className={css.work__image}
+                data-is-number-odd={!isNumberEven(index)}
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -37,7 +40,10 @@ const Work = () => {
               </div>
             </Col>
             <Col lg={6}>
-              <div className={css.work__text}>
+              <div
+                className={css.work__text}
+                data-is-number-odd={!isNumberEven(index)}
+              >
                 <Header type={"h3"} style={"h3"}>
                   {project.title}
                 </Header>

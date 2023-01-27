@@ -21,7 +21,7 @@
 }
 
 .hero__description {
-  @include sm {
+  @include md {
     br {
       display: none;
     }
