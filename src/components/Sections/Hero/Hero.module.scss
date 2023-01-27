@@ -1,0 +1,29 @@
+@import "styles/mixins";
+
+.hero__portrait {
+  width: 100%;
+  height: 688px;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 50%;
+    width: 5px;
+    background: var(--ps--color-action);
+    position: absolute;
+    left: -50px;
+    top: 0;
+  }
+}
+
+.hero__description {
+  @include sm {
+    br {
+      display: none;
+    }
+  }
+}

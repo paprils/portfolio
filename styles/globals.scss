@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import "./styles/_variables";
+@import "./styles/_mixins";
+@import "./styles/_body";
+@import "./styles/_gallery";
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--ps--color-action);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+

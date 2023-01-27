@@ -1,0 +1,53 @@
+@import "styles/mixins";
+
+.h1,
+.h2,
+.h3 {
+  font-weight: 700;
+  display: inline-block;
+
+  &[data-color = 'black'] {
+    color: var(--ps-text-primary)
+  }
+
+  &[data-color = 'accent'] {
+    color: var(--ps--color-action)
+  }
+
+  &[data-align="left"] {
+    text-align: left;
+  }
+
+  &[data-align="center"] {
+    text-align: center;
+    width: 100%;
+  }
+
+  &[data-align="right"] {
+    text-align: right;
+  }
+}
+
+.h1 {
+  font-size: 80px;
+
+  @include sm {
+    font-size: 50px;
+  }
+}
+
+.h2 {
+  font-size: 50px;
+
+  @include sm {
+    font-size: 30px;
+  }
+}
+
+.h3 {
+  font-size: 25px;
+
+  @include sm {
+    font-size: 16px;
+  }
+}

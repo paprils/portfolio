@@ -1,0 +1,61 @@
+//grid
+
+$grid-breakpoint-xxl: 1400px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-lg: 1024px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-sm: 667px;
+$grid-breakpoint-xs: 375px;
+$grid-breakpoint-xxs: 320px;
+
+$grid-gutter: 20px;
+$grid-column-gap: 26px;
+$grid-column-gap--lg: 16px;
+$grid-column-gap--md: 10px;
+$grid-column-gap--sm: 10px;
+$grid-container-max-width: (
+        xl: 1500px,
+        lg: 1200px,
+        md: 1000px,
+        sm: 100%,
+        xs: 100%,
+        xxs: 100%,
+);
+$grid-container-side-padding: (
+        xl: 40px,
+        lg: 30px,
+        md: 50px,
+        sm: 20px,
+        xs: 20px,
+        xxs: 10px,
+);
+$grid-container-margin: (
+        xl: auto,
+        lg: auto,
+        md: auto,
+        sm: auto,
+        xs: auto,
+        xxs: auto,
+);
+
+
+@mixin bottom-grid-padding {
+  padding-bottom: $grid-column-gap;
+  @include md {
+    padding-bottom: $grid-column-gap--md;
+  }
+  @include sm {
+    padding-bottom: $grid-column-gap--sm;
+  }
+}
+
+@mixin bottom-grid-margin {
+  margin-bottom: $grid-column-gap;
+  @include md {
+    margin-bottom: $grid-column-gap--md;
+  }
+  @include sm {
+    margin-bottom: $grid-column-gap--sm;
+  }
+}
+

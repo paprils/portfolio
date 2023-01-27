@@ -1,0 +1,41 @@
+@import "/styles/mixins";
+
+.image-gallery-slide img {
+  width: 100%;
+  height: 800px;
+}
+
+.image-gallery-svg {
+  display: none;
+}
+
+.image-gallery-right-nav,
+.image-gallery-left-nav {
+  &:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: var(--ps--color-action);
+    position: absolute;
+
+    @include sm {
+      display: none;
+    }
+  }
+}
+
+.image-gallery-right-nav {
+  &:before {
+    background: url("/arrow.svg") no-repeat;
+  }
+}
+
+.image-gallery-left-nav {
+  &:before {
+    background: url("/arrow-left.svg") no-repeat;
+  }
+}
+
+.image-gallery-icon {
+  filter: none !important;
+}

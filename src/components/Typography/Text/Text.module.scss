@@ -1,0 +1,11 @@
+.text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--ps-text-primary);
+  display: block;
+
+  a {
+    color: var(--ps--color-action);
+  }
+}

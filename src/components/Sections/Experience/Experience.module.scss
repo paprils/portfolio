@@ -1,0 +1,61 @@
+@import "/styles/mixins";
+
+.timeline {
+  width: 100%;
+  padding: 0;
+  margin: 100px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    top: 0;
+    background: var(--ps--color-action);
+    left: 50%;
+
+    @include sm {
+      display: none;
+    }
+  }
+}
+
+.timeline__item {
+  width: 50%;
+  margin-bottom: 70px;
+  white-space: pre-wrap;
+
+  @include sm {
+    width: 100%;
+  }
+
+  &:first-of-type {
+    margin-top: 70px;
+  }
+
+  &:nth-of-type(odd) {
+    align-self: flex-end;
+    padding-left: 50px;
+
+    @include sm {
+      padding-left: 0;
+    }
+  }
+
+  &:nth-of-type(even) {
+    h3, span {
+      text-align: right;
+      width: 100%;
+      padding-right: 50px;
+
+      @include sm {
+        text-align: left;
+        padding-right: 0;
+      }
+    }
+  }
+}

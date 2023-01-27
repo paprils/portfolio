@@ -1,0 +1,26 @@
+@import "styles/mixins";
+
+.work__image {
+  max-width: 500px;
+  height: 518px;
+  position: relative;
+
+  @include md {
+    height: 400px;
+  }
+}
+
+.work__text {
+  position: relative;
+  white-space: pre-wrap;
+  padding-left: 50px;
+
+  &:before {
+    content: "";
+    width: 5px;
+    height: 100px;
+    position: absolute;
+    background: var(--ps--color-action);
+    left: 20px;
+  }
+}

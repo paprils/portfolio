@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: scroll;
+  position: relative;
+
+  --ps-background-primary: #FFFFFF;
+  --ps-text-primary: #000000;
+  --ps--color-action: #F80F66;
+}
+
+
+.grecaptcha-badge {
+  transform: translateX(100%);
+}
