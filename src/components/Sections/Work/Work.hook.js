@@ -1,6 +1,24 @@
 const useWork = () => {
   const work = [
     {
+      title: "Authologic\nwebsite",
+      description: "Coding website for\nwww.authologic.com",
+      link: "/authologic",
+      image: "/authologic.png",
+    },
+    {
+      title: "Eye One\nwebsite",
+      description: "Coding website for\nwww.eye.one",
+      link: "/eye-one",
+      image: "/eyeone.png",
+    },
+    {
+      title: "Jaś Skorobohaty\nwebsite",
+      description: "Coding website for\nwww.jas-skorobohaty.pl",
+      link: "/jas",
+      image: "/jas.png",
+    },
+    {
       title: "CURE\nMaja Smółko",
       description: "Logo and website design for beauty company",
       link: "/cure",

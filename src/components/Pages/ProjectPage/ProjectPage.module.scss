@@ -4,6 +4,11 @@
   width: 100%;
   max-width: 700px;
   margin: 0 auto 100px auto;
+  white-space: pre-wrap;
+
+  @include sm {
+    white-space: unset;
+  }
 }
 
 .projectPage__image {

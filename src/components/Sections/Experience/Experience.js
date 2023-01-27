@@ -55,7 +55,9 @@ const Experience = () => {
               <Header type={"h3"} style={"h3"} color={"accent"}>
                 {job.title}
               </Header>
-              <Text>{job.description}</Text>
+              <div className={css.timeline__item__description}>
+                <Text>{job.description}</Text>
+              </div>
             </li>
           );
         })}

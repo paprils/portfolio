@@ -7,7 +7,7 @@ import css from "./ProjectPage.module.scss";
 import Image from "next/image";
 
 const ProjectPage = (props) => {
-  const { title, description, gallery } = props;
+  const { title, description, gallery, link } = props;
 
   return (
     <Page>
@@ -17,6 +17,13 @@ const ProjectPage = (props) => {
 
       <div className={css.projectPage__description}>
         <Text align={"center"}>{description}</Text>
+        {link && (
+          <Text align={"center"} opacity={1}>
+            <a href={`https://${link}`} target="_blank" rel="noopener">
+              {link}
+            </a>
+          </Text>
+        )}
       </div>
 
       {gallery.map((item) => {
@@ -41,6 +48,7 @@ ProjectPage.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   gallery: PropTypes.array,
+  link: PropTypes.string,
 };
 
 export default ProjectPage;
