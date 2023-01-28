@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@next/font": "13.1.5",
+    "@rive-app/react-canvas": "^3.0.35",
+    "framer-motion": "^8.5.4",
     "hamburger-react": "^2.5.0",
     "next": "12.2.4",
     "prettier": "^2.7.1",
@@ -19,6 +21,7 @@
     "react-image-gallery": "^1.2.11",
     "sass": "^1.54.3",
     "sass-loader": "^13.0.2",
+    "slugify": "^1.6.5",
     "stylelint-config-prettier": "^9.0.3",
     "webpack": "^5.74.0"
   }

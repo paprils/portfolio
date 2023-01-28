@@ -1,5 +1,12 @@
-import '/styles/globals.scss'
+import "/styles/globals.scss";
+import { AnchorProvider } from "@/contexts/anchor";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const Portfolio = ({ Component, pageProps }) => {
+  return (
+    <AnchorProvider>
+      <Component {...pageProps} />
+    </AnchorProvider>
+  );
+};
+
+export default Portfolio;

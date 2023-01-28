@@ -65,3 +65,17 @@
     }
   }
 }
+
+.work__animation {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.work__animation__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

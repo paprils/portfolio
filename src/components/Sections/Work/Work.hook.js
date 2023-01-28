@@ -1,4 +1,23 @@
+import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
+import { useEffect, useState } from "react";
+
 const useWork = () => {
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  const { rive, RiveComponent } = useRive({
+    src: "/mandala.riv",
+    stateMachines: "state",
+    autoplay: true,
+  });
+
+  const clickedInput = useStateMachineInput(rive, "state", "clicked", false);
+
+  useEffect(() => {
+    if (clickedInput) {
+      clickedInput.value = buttonClicked;
+    }
+  }, [buttonClicked]);
+
   const work = [
     {
       title: "Authologic\nwebsite",
@@ -41,7 +60,7 @@ const useWork = () => {
     },
   ];
 
-  return { work };
+  return { work, RiveComponent, buttonClicked, setButtonClicked, clickedInput };
 };
 
 export default useWork;

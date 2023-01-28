@@ -9,9 +9,11 @@ import Image from "next/image";
 import { Col, Row } from "@/components/Layout/LayoutGrid";
 import LayoutSpacing from "@/components/Layout/LayoutSpacing";
 import { isNumberEven } from "@/helpers/isNumberEven";
+import { motion } from "framer-motion";
+import Button from "@/components/Elements/Button";
 
 const Work = () => {
-  const { work } = useWork();
+  const { work, RiveComponent, setButtonClicked, buttonClicked } = useWork();
 
   return (
     <PageSection anchor={"work"}>
@@ -27,9 +29,26 @@ const Work = () => {
               orderXl={isNumberEven(index) ? 1 : 2}
               orderLg={isNumberEven(index) ? 1 : 2}
             >
-              <div
+              <motion.div
                 className={css.work__image}
                 data-is-number-odd={!isNumberEven(index)}
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: false }}
+                variants={{
+                  offscreen: {
+                    x: isNumberEven(index) ? -200 : 200,
+                    opacity: 0,
+                  },
+                  onscreen: {
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      duration: 1,
+                    },
+                  },
+                }}
               >
                 <Image
                   src={project.image}
@@ -37,7 +56,7 @@ const Work = () => {
                   layout={"fill"}
                   objectFit={"contain"}
                 />
-              </div>
+              </motion.div>
             </Col>
             <Col lg={6}>
               <div
@@ -60,6 +79,18 @@ const Work = () => {
           </Row>
         );
       })}
+
+      <Row>
+        <div className={css.work__animation}>
+          <div className={css.work__animation__button}>
+            <Button
+              label={"Click me"}
+              onClick={() => setButtonClicked(!buttonClicked)}
+            />
+          </div>
+          <RiveComponent />
+        </div>
+      </Row>
     </PageSection>
   );
 };

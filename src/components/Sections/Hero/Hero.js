@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <PageSection>
+    <PageSection anchor={"hero"}>
       <Row>
         <Col xl={5} lg={6} md={6} sm={12}>
           <div className={css.hero}>
@@ -28,7 +28,7 @@ const Hero = () => {
 
             <br />
             <br />
-            <Text style={"h2"} color={"accent"}>
+            <Text style={"h2"}>
               <div className={css.hero__description}>
                 For most of my career I’ve been working as a creative <br />
                 graphic designer and for the past year I’ve been <br />

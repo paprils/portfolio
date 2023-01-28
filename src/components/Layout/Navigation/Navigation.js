@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, HiddenSmDown } from "@/components/Layout/LayoutGrid";
 import css from "./Navigation.module.scss";
 import Link from "next/link";
 import useNavigation from "./Navigation.hook";
 import Text from "@/components/Typography/Text";
+import slugify from "slugify";
+import { AnchorContext } from "@/contexts/anchor";
 
 const Navigation = () => {
   const { menu } = useNavigation();
+  const { activeAnchor } = useContext(AnchorContext);
 
   return (
     <div className={css.navigation__wrapper}>
@@ -24,7 +27,17 @@ const Navigation = () => {
                   <li className={css.navigation__list__item} key={item.title}>
                     <Link href={item.link}>
                       <a>
-                        <Text opacity={1}>{item.title}</Text>
+                        <Text
+                          opacity={1}
+                          color={
+                            slugify(activeAnchor) ===
+                            slugify(item.title.toLowerCase())
+                              ? "accent"
+                              : "black"
+                          }
+                        >
+                          {item.title}
+                        </Text>
                       </a>
                     </Link>
                   </li>

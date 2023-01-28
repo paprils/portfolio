@@ -13,7 +13,7 @@ const useNavigation = () => {
       link: "/#work",
     },
     {
-      title: "Illustrations & hobby",
+      title: "Illustrations",
       link: "/#illustrations",
     },
     {
