@@ -71,6 +71,10 @@
   height: 500px;
   margin: auto;
   position: relative;
+
+  @include md {
+    width: 100%;
+  }
 }
 
 .work__animation__button {
