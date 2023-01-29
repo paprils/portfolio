@@ -22,6 +22,11 @@ const usePageSection = (sectionRef, props) => {
         if (activeAnchor !== getAnchor(anchor)) {
           setActiveAnchor(getAnchor(anchor));
         }
+      } else if (
+        window.innerHeight + window.pageYOffset >=
+        document.body.offsetHeight
+      ) {
+        setActiveAnchor("contact");
       }
     }
   };
