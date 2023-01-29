@@ -5,7 +5,7 @@ const useWork = () => {
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const { rive, RiveComponent } = useRive({
-    src: "/mandala.riv",
+    src: "/poro.riv",
     stateMachines: "state",
     autoplay: true,
   });
@@ -16,6 +16,19 @@ const useWork = () => {
     if (clickedInput) {
       clickedInput.value = buttonClicked;
     }
+  }, [buttonClicked]);
+
+  useEffect(() => {
+    let timeoutId;
+    timeoutId = setTimeout(() => {
+      setButtonClicked(false);
+    }, 3500);
+
+    return () => {
+      if (typeof timeoutId !== "undefined") {
+        clearTimeout(timeoutId);
+      }
+    };
   }, [buttonClicked]);
 
   const work = [

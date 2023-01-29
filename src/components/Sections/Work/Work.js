@@ -82,13 +82,18 @@ const Work = () => {
 
       <Row>
         <div className={css.work__animation}>
-          <div className={css.work__animation__button}>
+          <div
+            className={css.work__animation__button}
+            style={{ zIndex: buttonClicked ? -1 : 6 }}
+          >
             <Button
               label={"Click me"}
               onClick={() => setButtonClicked(!buttonClicked)}
             />
           </div>
-          <RiveComponent />
+          <div className={css.work__animation__rive}>
+            <RiveComponent />
+          </div>
         </div>
       </Row>
     </PageSection>
