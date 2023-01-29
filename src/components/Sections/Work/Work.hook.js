@@ -66,8 +66,7 @@ const useWork = () => {
     {
       title:
         "Happy solutions\nApp design for company time\nand holidays tracking",
-      description:
-        "Simple app design for tracking time spent on projects.\nDesigned in light & dark mode.",
+      description: "Simple app design for tracking time spent on projects.",
       link: "/happy-solutions",
       image: "/happy-solutions.png",
     },

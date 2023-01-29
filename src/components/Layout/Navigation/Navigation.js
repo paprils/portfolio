@@ -24,20 +24,17 @@ const Navigation = () => {
               <li className={css.navigation__list__item}></li>
               {menu.map((item) => {
                 return (
-                  <li className={css.navigation__list__item} key={item.title}>
+                  <li
+                    className={css.navigation__list__item}
+                    key={item.title}
+                    data-active={
+                      slugify(activeAnchor) ===
+                      slugify(item.title.toLowerCase())
+                    }
+                  >
                     <Link href={item.link}>
                       <a>
-                        <Text
-                          opacity={1}
-                          color={
-                            slugify(activeAnchor) ===
-                            slugify(item.title.toLowerCase())
-                              ? "accent"
-                              : "black"
-                          }
-                        >
-                          {item.title}
-                        </Text>
+                        <Text opacity={1}>{item.title}</Text>
                       </a>
                     </Link>
                   </li>
