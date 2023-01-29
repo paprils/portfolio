@@ -87,6 +87,7 @@
 .work__animation__rive {
   position: relative;
   z-index: 5;
-  width: 500px;
+  max-width: 500px;
   height: 500px;
+  width: 100%;
 }
