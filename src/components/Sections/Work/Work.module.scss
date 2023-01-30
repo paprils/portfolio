@@ -27,14 +27,7 @@
   white-space: pre-wrap;
   padding-left: 50px;
 
-  &:before {
-    content: "";
-    width: 5px;
-    height: 100px;
-    position: absolute;
-    background: var(--ps--color-action);
-    left: 20px;
-  }
+
 
   &[data-is-number-odd="true"] {
     padding-left: 0;
@@ -45,22 +38,37 @@
       padding-right: 0;
     }
 
-    &:before {
-      left: unset;
-      right: 20px;
-
-      @include sm {
-        left: 20px;
-        right: unset;
-      }
-    }
-
     h3, span {
       text-align: right !important;
       width: 100%;
 
       @include sm {
         text-align: left !important;
+      }
+    }
+  }
+}
+
+.work__title {
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    background: var(--ps--color-action);
+    left: -20px;
+  }
+
+  &[data-is-number-odd="true"] {
+    &:before {
+      left: unset;
+      right: -20px;
+
+      @include sm {
+        left: -20px;
+        right: unset;
       }
     }
   }

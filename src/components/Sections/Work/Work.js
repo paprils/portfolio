@@ -63,9 +63,14 @@ const Work = () => {
                 className={css.work__text}
                 data-is-number-odd={!isNumberEven(index)}
               >
-                <Header type={"h3"} style={"h3"}>
-                  {project.title}
-                </Header>
+                <div
+                  className={css.work__title}
+                  data-is-number-odd={!isNumberEven(index)}
+                >
+                  <Header type={"h3"} style={"h3"}>
+                    {project.title}
+                  </Header>
+                </div>
                 <LayoutSpacing />
                 <Text>{project.description}</Text>
                 <LayoutSpacing />

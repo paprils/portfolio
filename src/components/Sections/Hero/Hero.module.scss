@@ -6,24 +6,24 @@
   position: relative;
 }
 
-.hero {
-  position: relative;
-
-  &:before {
-    content: "";
-    height: 50%;
-    width: 5px;
-    background: var(--ps--color-action);
-    position: absolute;
-    left: -50px;
-    top: 0;
-  }
-}
-
 .hero__description {
   @include md {
     br {
       display: none;
     }
+  }
+}
+
+.hero__title {
+  position: relative;
+
+  &:before {
+    content: "";
+    height: 100%;
+    width: 5px;
+    background: var(--ps--color-action);
+    position: absolute;
+    left: -50px;
+    top: 0;
   }
 }

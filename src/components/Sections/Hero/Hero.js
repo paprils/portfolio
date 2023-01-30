@@ -12,7 +12,7 @@ const Hero = () => {
     <PageSection anchor={"hero"}>
       <Row>
         <Col xl={5} lg={6} md={6} sm={12}>
-          <div className={css.hero}>
+          <div className={css.hero__title}>
             <Header style={"h2"} type={"h2"}>
               Hi, I’m
             </Header>
@@ -25,27 +25,27 @@ const Hero = () => {
             <Header style={"h2"} type={"h2"}>
               and I <span style={{ color: "#F80F66" }}>create & code</span>
             </Header>
-
-            <br />
-            <br />
-            <Text style={"h2"}>
-              <div className={css.hero__description}>
-                For most of my career I’ve been working as a creative <br />
-                graphic designer and for the past year I’ve been <br />
-                working as a Junior React Developer.
-              </div>
-            </Text>
-            <br />
-            <br />
-            <Link href={"#about"}>
-              <a>
-                <Header style={"h3"} type={"h3"} color={"accent"}>
-                  read more
-                </Header>
-              </a>
-            </Link>
-            <br />
           </div>
+
+          <br />
+          <br />
+          <Text style={"h2"}>
+            <div className={css.hero__description}>
+              For most of my career I’ve been working as a creative <br />
+              graphic designer and for the past year I’ve been <br />
+              working as a Junior React Developer.
+            </div>
+          </Text>
+          <br />
+          <br />
+          <Link href={"#about"}>
+            <a>
+              <Header style={"h3"} type={"h3"} color={"accent"}>
+                read more
+              </Header>
+            </a>
+          </Link>
+          <br />
         </Col>
         <Col xl={7} lg={6} md={6} sm={12}>
           <div className={css.hero__portrait}>

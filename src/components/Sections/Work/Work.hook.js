@@ -45,6 +45,12 @@ const useWork = () => {
       image: "/eyeone.png",
     },
     {
+      title: "Eye One\nplatform",
+      description: "Coding app for\nEye One",
+      link: "/eye-one-platform",
+      image: "/eyeone-platform.png",
+    },
+    {
       title: "Jaś Skorobohaty\nwebsite",
       description: "Coding website for\nwww.jas-skorobohaty.pl",
       link: "/jas",
