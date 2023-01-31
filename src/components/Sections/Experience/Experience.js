@@ -4,12 +4,13 @@ import Header from "@/components/Typography/Header";
 import Text from "@/components/Typography/Text";
 import Link from "next/link";
 import useExperience from "@/components/Sections/Experience/Experience.hook";
-import css from "./Experience.module.scss";
-import { isNumberEven } from "@/helpers/isNumberEven";
-import { motion } from "framer-motion";
+import Tabs from "@/components/Elements/Tabs";
+import LayoutSpacing from "@/components/Layout/LayoutSpacing";
+import Work from "@/components/Sections/Experience/Elements/Work";
+import Education from "@/components/Sections/Experience/Elements/Education";
 
 const Experience = () => {
-  const { experience } = useExperience();
+  const { activeTab, setActiveTab } = useExperience();
 
   return (
     <PageSection anchor={"about"}>
@@ -46,44 +47,14 @@ const Experience = () => {
         </Link>
       </Text>
 
-      <ul className={css.timeline}>
-        {experience.map((job, index) => {
-          return (
-            <motion.li
-              className={css.timeline__item}
-              key={job.title}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: false }}
-              variants={{
-                offscreen: {
-                  x: isNumberEven(index) ? 200 : -200,
-                  opacity: 0,
-                },
-                onscreen: {
-                  x: 0,
-                  opacity: 1,
-                  transition: {
-                    type: "spring",
-                    duration: 1,
-                  },
-                },
-              }}
-            >
-              <Header type={"h3"} style={"h3"}>
-                {job.period}
-              </Header>
-              <br />
-              <Header type={"h3"} style={"h3"} color={"accent"}>
-                {job.title}
-              </Header>
-              <div className={css.timeline__item__description}>
-                <Text>{job.description}</Text>
-              </div>
-            </motion.li>
-          );
-        })}
-      </ul>
+      <LayoutSpacing height={50} />
+      <Tabs
+        tabs={["Work", "Education"]}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+      {activeTab === "Work" && <Work />}
+      {activeTab === "Education" && <Education />}
     </PageSection>
   );
 };

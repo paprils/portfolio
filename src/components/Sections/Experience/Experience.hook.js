@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const useExperience = () => {
+  const [activeTab, setActiveTab] = useState("Work");
+
   const experience = [
     {
       period: "nov 2021 - current",
@@ -20,7 +24,32 @@ const useExperience = () => {
     },
   ];
 
-  return { experience };
+  const education = [
+    {
+      period: "aug 2021",
+      title: "Google UX Design Certificate",
+      description: "- Online UX Design Course on Coursera",
+    },
+    {
+      period: "aug 2021",
+      title:
+        "Johns Hopkins University\nHTML, CSS, and Javascript for Web Developers",
+      description: "- Online HTML, CSS, JS Course on Coursera",
+    },
+    {
+      period: "oct 2013 - aug 2017",
+      title:
+        "Wyższa Szkoła Informatyki Stosowanej i Zarządzania WIT w Warszawie",
+      description: "- Bachelor's degree in graphic design",
+    },
+    {
+      period: "sep 2011 - aug 2013",
+      title: "Professionshøjskolen UCN",
+      description: "- AP degree in graphic design",
+    },
+  ];
+
+  return { experience, activeTab, setActiveTab, education };
 };
 
 export default useExperience;

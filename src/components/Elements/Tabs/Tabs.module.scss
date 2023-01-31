@@ -1,0 +1,43 @@
+.tab {
+  cursor: pointer;
+  opacity: 0.3;
+  position: relative;
+  transition: opacity 0.3s;
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 3px;
+    width: 100%;
+    background: var(--ps--color-action);
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &[data-active="true"]{
+    opacity: 1;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: auto;
+}
