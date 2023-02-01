@@ -8,7 +8,7 @@ const useExperience = () => {
       period: "nov 2021 - current",
       title: "Junior React Developer\nThe Fat Cat",
       description:
-        "- HTML, CSS, JS, React, Typescript\n- Creating app’s and website’s layouts based on provided designs\n- Working with external npm libraries\n- Co-creating project documentations (storybook)",
+        "- HTML, CSS, JS, React, Typescript, NextJS, CMS\n- Creating app’s and website’s layouts based on provided designs\n- Working with external npm libraries\n- Co-creating project documentations (storybook)",
     },
     {
       period: "sep 2017 - nov 2021",
